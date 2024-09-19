@@ -1,0 +1,12 @@
+export { ReactComponent  as I8Logo } from './Oval 3.svg';
+export { ReactComponent  as VISALogo } from './visa-svgrepo-com.svg';
+export { ReactComponent  as HeroPattern } from './confetii.svg';
+export { ReactComponent  as HeroMan } from './Man.svg';
+export { ReactComponent  as StarPattern } from './star-pattern.svg';
+export { ReactComponent  as MoonBoy } from './moon-boy.svg';
+export { ReactComponent  as HowPattern } from './how-pattern.svg';
+export { ReactComponent  as SpannerChick } from './spanner-chick.svg';
+export { ReactComponent  as Cloud } from './icon_1.svg';
+export { ReactComponent  as Developer } from './icon_2.svg';
+export { ReactComponent  as RealTime } from './icon_3.svg';
+export { ReactComponent  as Integration } from './icon_4.svg';
