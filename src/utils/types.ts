@@ -1,3 +1,5 @@
+import React from 'react'
+
 export type NavType = {
     link: string;
     url: string
@@ -10,3 +12,18 @@ export type HowItWorksType = {
     icon: any
     className?: string;
 }
+
+export type PricingCardType = {
+    price: number,
+    description: string,
+    features: string[]
+}
+
+export type FAQsType = {
+    header: {
+        title: string,
+        image?: any
+        imageAlt?: string
+    };
+    content: any
+};

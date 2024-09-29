@@ -1,5 +1,6 @@
 import { Cloud, Developer, Integration, RealTime } from "src/assets"
-import { HowItWorksType, NavType } from "./types"
+import { HowItWorksType, NavType, PricingCardType } from "./types"
+import { FacebookIcon, GooglePlusIcon, LinkedInIcon, TwitterIcon, YoutubeIcon } from 'src/assets'
 
 export const links: NavType[] = [
     {
@@ -43,3 +44,85 @@ export const howItWorks: HowItWorksType[] = [
         icon: Integration
     },
 ]
+
+export const pricing: PricingCardType[] = [
+    {
+        price: 49,
+        description: 'A pay-one icense, just for you',
+        features: [
+            'The Mac app - yours to keep',
+            'Beautiful White_level',
+            'One year of saving to Cloud'
+        ]
+    }, 
+    {
+        price: 99,
+        description: 'Pro account, just for you',
+        features: [
+            'The Mac app - yours to keep',
+            'Beautiful White_level',
+            'One year of saving to Cloud',
+            'A personal Cloud workspace',
+            'All tools, just for you'
+        ]
+    }, 
+    {
+        price: 299,
+        description: 'A pay-one icense, just for you',
+        features: [
+            'Access to the  Mac app for all',
+            'A shared cloud workspace',
+            'Free Cloud access for unlim',
+            'Easy team management',
+            'No license key required'
+        ]
+    }, 
+]
+
+export const footerLinks: NavType[][] = [
+    [
+        {
+            link: 'About us',
+            url: '#about-us'
+        }, {
+            link: 'How it works',
+            url: '#how-it-works'
+        }, {
+            link: 'Pricing',
+            url: '#pricing'
+        }, {
+            link: 'FAQs',
+            url: '#faqs'
+        }
+    ],
+    [
+        {
+            link: 'Load generation',
+            url: '/'
+        }, 
+        {
+            link: 'Customer engagment',
+            url: '#about-us'
+        }, 
+        {
+            link: 'Customer support',
+            url: '#faqs'
+        },
+        {
+            link: 'Help Center Articles',
+            url: '#how-it-works'
+        }, 
+        {
+            link: 'Outbound Messages',
+            url: '#pricing'
+        }, 
+    ],
+]
+
+export const socialIcons = [
+  { Icon: FacebookIcon, fill: '#ffffff' },
+  { Icon: TwitterIcon, fill: '#ffffff' },
+  { Icon: GooglePlusIcon, fill: '#ffffff' },
+  { Icon: LinkedInIcon, fill: '#ffffff' },
+  { Icon: YoutubeIcon, fill: '#ffffff' },
+];

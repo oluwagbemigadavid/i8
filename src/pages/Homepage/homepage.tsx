@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { HOMEPAGEABOUT, HOMEPAGEHERO, HOMEPAGEHOW } from 'src/components'
+import { HOMEPAGEABOUT, HOMEPAGEFAQS, HOMEPAGEHERO, HOMEPAGEHOW, HOMEPAGEPRICING } from 'src/components'
 
 
 
@@ -12,6 +12,8 @@ const homepage = (props: Props) => {
       <HOMEPAGEHERO/>
       <HOMEPAGEABOUT />
       <HOMEPAGEHOW />
+      <HOMEPAGEPRICING />
+      <HOMEPAGEFAQS />
     </div>
   )
 }

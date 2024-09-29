@@ -6,7 +6,7 @@ import { NavType } from 'src/utils'
 
 export const Links = ({link, url, className} : NavType ) => {
     return (
-        <a href={url} className={`'text-[18px] leading-[24px] px-[20px] py-[14px] hover:opacity-80' ${className ? className : ''}`}>
+        <a href={url} className={`text-[18px] leading-[24px] px-[20px] py-[14px] hover:opacity-80 ${className ? className : ''}`}>
             {link}
         </a>
     )

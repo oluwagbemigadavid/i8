@@ -23,7 +23,7 @@ const CustomListItem = ({title, description, icon: Icon}: HowItWorksType) => {
 
 const HowItWorks = (props: Props) => {
   return (
-    <div className="pt-[200px]">
+    <div className="pt-[200px]" id='how-it-works'>
           <div className="container flex items-start justify-between">
             <div className="w-[659px]">
                 <p className="border-[1px] border-black uppercase leading-[26px] text-[14px] tracking-[0px] w-[160px] h-[38px] px-[20px] py-[6px] ultrabold whitespace-nowrap">

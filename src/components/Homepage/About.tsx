@@ -6,7 +6,7 @@ type Props = {}
 
 const About = (props: Props) => {
   return (
-    <div className='pt-[200px] relative'>
+    <div className='pt-[200px] relative' id="about-us">
         
         <div className="container flex items-start justify-between">
             <div className="flex items-start justify-center top-0 lg:relative absolute md:left-[-2rem] 2xl:left-[0rem] transition-all duration-500">
