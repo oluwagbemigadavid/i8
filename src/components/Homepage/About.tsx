@@ -8,12 +8,12 @@ const About = (props: Props) => {
   return (
     <div className='pt-[200px] relative' id="about-us">
         
-        <div className="container flex items-start justify-between">
+        <div className="container flex flex-col-reverse items-start justify-between">
             <div className="flex items-start justify-center top-0 lg:relative absolute md:left-[-2rem] 2xl:left-[0rem] transition-all duration-500">
               <StarPattern/>
               <MoonBoy className='absolute  mt-[106.25px]' />
             </div>
-            <div className="w-[750px]">
+            <div className="w-full sm:w-[750px]">
                 <p className="border-[1px] border-black uppercase leading-[26px] text-[14px] tracking-[0px] w-[115px] h-[38px] px-[20px] py-[6px] ultrabold whitespace-nowrap">
                     About us
                 </p>

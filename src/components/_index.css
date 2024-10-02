@@ -1,1 +1,3 @@
-@import url('./Accordion/_accordion');
+.home__hero .container {
+  background-color: orange;
+}

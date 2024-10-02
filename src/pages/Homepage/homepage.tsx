@@ -10,10 +10,10 @@ const homepage = (props: Props) => {
   return (
     <div>
       <HOMEPAGEHERO/>
-      <HOMEPAGEABOUT />
-      <HOMEPAGEHOW />
+      {/* <HOMEPAGEABOUT /> */}
+      {/*<HOMEPAGEHOW />
       <HOMEPAGEPRICING />
-      <HOMEPAGEFAQS />
+      <HOMEPAGEFAQS /> */}
     </div>
   )
 }
