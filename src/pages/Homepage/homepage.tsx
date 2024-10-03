@@ -10,7 +10,7 @@ const homepage = (props: Props) => {
   return (
     <div>
       <HOMEPAGEHERO/>
-      {/* <HOMEPAGEABOUT /> */}
+      <HOMEPAGEABOUT />
       {/*<HOMEPAGEHOW />
       <HOMEPAGEPRICING />
       <HOMEPAGEFAQS /> */}

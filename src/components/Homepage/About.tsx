@@ -6,10 +6,10 @@ type Props = {}
 
 const About = (props: Props) => {
   return (
-    <div className='pt-[200px] relative' id="about-us">
+    <div className='pt-[200px] ' id="about-us">
         
-        <div className="container flex flex-col-reverse items-start justify-between">
-            <div className="flex items-start justify-center top-0 lg:relative absolute md:left-[-2rem] 2xl:left-[0rem] transition-all duration-500">
+        <div className="container flex flex-row items-start justify-between">
+            <div className="hidden lg:flex items-start justify-center top-0 lg:relative absolute md:left-[-2rem] 2xl:left-[0rem] transition-all duration-500">
               <StarPattern/>
               <MoonBoy className='absolute  mt-[106.25px]' />
             </div>
@@ -26,6 +26,10 @@ loops make life easier.
 people to individual documents. It’s up to you. Stakeholders can check 
 out designs in their web browser, test prototypes and leave feedback for free.
               </p>
+            <div className="flex lg:hidden items-start justify-center h-[450px] my-[40px]  transition-all duration-500">
+              <StarPattern/>
+              <MoonBoy className='absolute  mt-[106.25px]' />
+            </div>
               <ul className="pt-[60px] list-square">
                 <li className='flex items-center justify-start leading-[28px] text-[20px]'>
                     <div className='relative w-[10px] h-[10px] bg-black ml-[9px] mr-[29px]' /> 
