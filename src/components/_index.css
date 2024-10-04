@@ -1,3 +1,69 @@
-.home__hero .container {
-  background-color: orange;
+.nav .mobile_nav {
+  width: 100dvw;
+  height: 100dvh;
+  animation: drop .35s linear ;
+
+  .nav_link {
+    display: none;
+    position: relative;
+    overflow: hidden;
+
+  }
+  .nav_link::before {
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background: #f0f0f0;
+    left: 0%;
+    top: 0px;
+    animation: slide-left .35s linear forwards;
+  }
+  .nav_link::after {
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background: #f0f0f0;
+    right: 0%;
+    top: 0px;
+    animation: slide-right .35s linear forwards;
+  }
+  .nav_cta {
+    opacity: 0;
+    animation: appear .35s ease-in 850ms forwards;
+  }
+}
+
+@keyframes drop {
+  from {
+  height: 0vh;
+  }
+  to {
+  height: 100vh;
+  }
+}
+@keyframes slide-left {
+  from {
+  left: 0%;
+  }
+  to {
+  left: -50%;
+  }
+}
+@keyframes slide-right {
+  from {
+    right: 0%;
+  }
+  to {
+    right: -50%;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 1;
+  }
 }

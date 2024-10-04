@@ -1,12 +1,12 @@
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { I8Logo } from 'src/assets';
 import { links } from 'src/utils';
 import { NavType } from 'src/utils';
 
-export const Links = ({ link, url, className }: NavType) => {
+export const Links = ({ link, url, className, style }: NavType) => {
   return (
-    <a href={url} className={`text-[18px] leading-[24px] px-[20px] py-[14px] hover:opacity-80 ${className ? className : ''}`}>
+    <a href={url} style={ style } className={`text-[18px] leading-[24px] px-[20px] py-[14px] hover:opacity-80 ${className ? className : ''}`}>
       {link}
     </a>
   );
@@ -14,15 +14,45 @@ export const Links = ({ link, url, className }: NavType) => {
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [visibleLinks, setVisibleLinks] = useState<number[]>([]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    if (isOpen) {
+      setTimeout(() => {
+        links.forEach((_, idx) => {
+          setTimeout(() => {
+            setVisibleLinks((prev) => [...prev, idx]);
+          }, 100 * idx);
+        });
+      }, 350);
+    } else {
+      
+      setVisibleLinks([]);
+    }
+  }, [isOpen]);
+
+
+  useEffect(() => {
+    
+  const body = document.body;
+
+  if (isOpen) {
+    body.classList.add('scroll-lock');
+  } else {
+    body.classList.remove('scroll-lock');
+  }
+
+  }, [isOpen])
+  
+
   return (
-    <div className={clsx("pt-[32px] fixed w-full z-[999]",
+    <div className={clsx(" pt-[32px] fixed w-full z-[999]",
         {
-            " bg-[#f0f0f0]" : isOpen
+            " bg-[#f0f0f0] nav" : window.innerWidth < 1024
         }
     )}>
       <div className="container flex justify-between items-center">
@@ -31,7 +61,7 @@ const Nav = () => {
         </div>
         <div className={clsx("w-full justify-between items-center hidden lg:flex bg-[#f0f0f0]",
             {
-                "fixed w-screen h-screen top-0 left-0 z-[99] !flex flex-col !justify-start pt-[150px] gap-[40px]" : isOpen
+                "fixed mobile_nav top-0 left-0 z-[99] !flex flex-col !justify-start pt-[150px] gap-[40px]" : isOpen
             }
         )}>
           <div className={clsx("mr-auto flex items-center gap-[20px]",
@@ -40,16 +70,22 @@ const Nav = () => {
             }
         )}>
             {links.map((link: { link: string; url: string }, idx: number) => (
-              <Links key={idx} link={link.link} url={link.url} className={clsx("",
-                {
-                    "w-full py-[24px] text-center" : isOpen
-                }
-            )} />
+              <Links 
+              key={idx} 
+              link={link.link} 
+              url={link.url} 
+              className={clsx(
+                "nav_link",
+                { 
+                  "w-full py-[24px] text-center": isOpen 
+                }, `${(visibleLinks.includes(idx) && isOpen) ||  window.innerWidth > 1024 ? '!inline-block' : 'hidden'}`
+              )}
+            />
             ))}
           </div>
           <div className="w-fit flex gap-[20px]">
-            <Links link="Login" url="/" className="bg-white" />
-            <Links link="Sign Up" url="/" className="text-white bg-black" />
+            <Links link="Login" url="/" className="nav_cta bg-white" />
+            <Links link="Sign Up" url="/" className="nav_cta text-white bg-black" />
           </div>
         </div>
 

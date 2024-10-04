@@ -9,3 +9,8 @@ body {
 .ultrabold {
     font-weight: 800;
 }
+
+body.scroll-lock {
+    overflow: hidden;
+  }
+  

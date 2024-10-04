@@ -4,6 +4,7 @@ export type NavType = {
     link: string;
     url: string
     className?: string;
+    style?: any
 }
 
 export type HowItWorksType = {
