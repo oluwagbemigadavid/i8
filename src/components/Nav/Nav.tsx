@@ -25,7 +25,7 @@ const Nav = () => {
             " bg-[#f0f0f0]" : isOpen
         }
     )}>
-      <div className="container flex justify-between items-center bg-green-300">
+      <div className="container flex justify-between items-center">
         <div className="logo mr-[20px] z-[999]">
           <I8Logo/>
         </div>

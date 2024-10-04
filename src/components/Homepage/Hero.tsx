@@ -46,7 +46,7 @@ const Hero = (props: Props) => {
               — on a single platform. Powerful, affordable & easy.
               </p>
               <div className="flex item-center justify-start pt-[40px]">
-                <input type="email" className="w-[200px] lg:w-[361px] h-[52px] bg-white py-[14px] px-[16px] border-[1px] border-transparent outline-none focus:border-black leading-[26px] text-[18px] tracking-[0px]" placeholder='Enter your email' />
+                <input type="email" className="w-[180px] lg:w-[361px] h-[52px] bg-white py-[14px] px-[16px] border-[1px] border-transparent outline-none focus:border-black leading-[26px] text-[18px] tracking-[0px]" placeholder='Enter your email' />
                 <Links link='Get started' url='/'  className="text-white bg-black" />
               </div>
               <div className="flex items-center gap-[28px] pt-[80px] w-[400px] lg:w-fit">

@@ -1,19 +1,18 @@
 import React from 'react'
 import { MoonBoy, StarPattern } from 'src/assets'
-import { Links } from '../Nav/Nav'
 
 type Props = {}
 
 const About = (props: Props) => {
   return (
-    <div className='pt-[200px] ' id="about-us">
+    <div className='pt-[200px] overflow-hidden ' id="about-us">
         
         <div className="container flex flex-row items-start justify-between">
             <div className="hidden lg:flex items-start justify-center top-0 lg:relative absolute md:left-[-2rem] 2xl:left-[0rem] transition-all duration-500">
               <StarPattern/>
               <MoonBoy className='absolute  mt-[106.25px]' />
             </div>
-            <div className="w-full sm:w-[750px]">
+            <div className="w-full sm:w-[750px] ">
                 <p className="border-[1px] border-black uppercase leading-[26px] text-[14px] tracking-[0px] w-[115px] h-[38px] px-[20px] py-[6px] ultrabold whitespace-nowrap">
                     About us
                 </p>
@@ -26,9 +25,9 @@ loops make life easier.
 people to individual documents. It’s up to you. Stakeholders can check 
 out designs in their web browser, test prototypes and leave feedback for free.
               </p>
-            <div className="flex lg:hidden items-start justify-center h-[450px] my-[40px]  transition-all duration-500">
+            <div className="flex flex-col lg:hidden items-center justify-center h-[450px] my-[40px]">
               <StarPattern/>
-              <MoonBoy className='absolute  mt-[106.25px]' />
+              <MoonBoy className=' mt-[-50%]' />
             </div>
               <ul className="pt-[60px] list-square">
                 <li className='flex items-center justify-start leading-[28px] text-[20px]'>

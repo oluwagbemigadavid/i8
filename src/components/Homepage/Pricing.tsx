@@ -8,19 +8,19 @@ type Props = {}
 
 const Pricing = (props: Props) => {
   return (
-    <div className='pt-[200px] relative' id="pricing">
+    <div className='pt-[200px] relative overflow-hidden' id="pricing">
         
         <div className="container ">
 
-            <div className="flex justify-between items-center">
-              <div className="flex items-start justify-center top-0 lg:relative absolute md:left-[-2rem] 2xl:left-[0rem] transition-all duration-500">
+            <div className="flex flex-col lg:flex-row justify-between items-center">
+              <div className="hidden lg:flex items-start justify-center top-0 lg:relative absolute md:left-[-2rem] 2xl:left-[0rem] transition-all duration-500">
                 <PricingSvg />
               </div>
-              <div className="max-w-[743px] h-fit flex flex-col items-end  text-right">
+              <div className="max-w-[743px] h-fit flex flex-col items-start lg:items-end  text-left lg:text-right">
                 <p className="border-[1px] border-black uppercase leading-[26px] text-[14px] tracking-[0px] w-[115px] h-[38px] px-[20px] py-[6px] ultrabold whitespace-nowrap">
                       Pricing
                   </p>
-                <h2 className="w-full text-[60px] leading-[normal] tracking-[-3px] pt-[46px]">
+                <h2 className="w-full text-[44px] lg:text-[60px] leading-[56px] lg:leading-[normal] tracking-[-4px] lg:tracking-[-3px] pt-[40px] lg:pt-[46px]">
                 Select a membership level the right price for you.
                 </h2>
                 <p className="pt-[20px] leading-[26px] text-[18px] tracking-[0px]">
@@ -28,12 +28,16 @@ const Pricing = (props: Props) => {
                   By using our program you agree to out terms and policies.
                 </p> 
               </div>
+              
+              <div className="flex w-full md:w-unset lg:hidden items-center justify-center ">
+                <PricingSvg  />
+              </div>
             </div>
 
-            <div className="mt-[60px] flex justify-between">
+            <div className="mt-[60px] flex flex-col lg:flex-row gap-[24px] justify-between">
              {pricing.map( (item: any, idx: number)  => (
               <div className={clsx(
-                'flex flex-col h-[644px] w-[400px] py-[50px] px-[40px] border-[1px] border-[#151515]', {
+                'flex flex-col h-fit lg:h-[644px] w-full lg:w-[400px] py-[50px] px-[40px] border-[1px] border-[#151515]', {
                   'bg-black !text-white' : idx === 1 
                 }
               )} key={item.price}>

@@ -18,7 +18,7 @@ const AccordionHeader = ({title, image, imageAlt, id, open, active}: Props) => {
     }
   return (
     <div className="flex items-center justify-between  cursor-pointer pb-[20px]" onClick={handleClick}>
-        <div className="flex items-end justify-start gap-2">
+        <div className="flex items-center justify-start gap-2">
           {image && <img className='w-[35px] h-[35px] rounded-full overflow-hidden object-center' src={image} alt={imageAlt} loading="lazy" />}
           <p className="ultrabold leading-[28px] text-[20px] tracking-[0px]">
             {title}

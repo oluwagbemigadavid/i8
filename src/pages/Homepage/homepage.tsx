@@ -11,9 +11,9 @@ const homepage = (props: Props) => {
     <div>
       <HOMEPAGEHERO/>
       <HOMEPAGEABOUT />
-      {/*<HOMEPAGEHOW />
+      <HOMEPAGEHOW />
       <HOMEPAGEPRICING />
-      <HOMEPAGEFAQS /> */}
+      <HOMEPAGEFAQS />
     </div>
   )
 }

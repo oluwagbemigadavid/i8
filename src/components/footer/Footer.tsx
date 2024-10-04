@@ -9,21 +9,21 @@ const Footer = (props: Props) => {
   return (
     <div className="bg-[#151515] text-white mt-[200px]">
       <div className="container py-[32px]">
-         <div className=" flex items-start justify-between ">
-          <div className="w-[484px]">
+         <div className=" flex flex-col lg:flex-row items-start justify-between ">
+          <div className="w-full md:w-[484px] flex flex-col justify-center mx-auto">
             <img src='/Oval 3.png' alt='logo alt' className='w-[52px] h-[52px]' />
-              <h1 className="w-full leading-[60px] text-[52px] tracking-[-4px] pt-[40px]">
+              <h1 className="w-full leading-[40px] lg:leading-[60px] text-[32px] lg:text-[52px] tracking-[-1px] lg:tracking-[-4px] pt-[40px]">
                 Want to receive our awesome stories?
                 </h1>
                 <div className="flex item-center justify-start pt-[32px]">
-                  <input type="email" className="w-[361px] h-[52px] bg-white py-[14px] px-[16px] border-[1px] border-transparent outline-none focus:border-black leading-[26px] text-[18px] tracking-[0px]" placeholder='Enter your email' />
+                  <input type="email" className="w-[200px] lg:w-[361px] h-[52px] bg-white py-[14px] px-[16px] border-[1px] border-transparent outline-none focus:border-black leading-[26px] text-[18px] tracking-[0px]" placeholder='Enter your email' />
                   <Links link='Subcribe' url='/'  className="text-white bg-black" />
                 </div>
           </div>
-          <div className="flex gap-[40px]">
+          <div className="flex flex-col-reverse w-full lg:w-fit items-center lg:items-start lg:flex-row pt-[60px] lg:pt-[0px]  gap-[60px] lg:gap-[40px]">
 
-            <div className="flex flex-col gap-[24px] justify-start">
-            <p className='text-[20px] leading-[28px] px-[18px] py-[14px] hover:opacity-80 ultrabold'>
+            <div className="flex flex-col gap-[24px] justify-start text-center lg:text-left">
+              <p className='text-[20px] leading-[28px] px-[18px] py-[14px] hover:opacity-80 ultrabold'>
                 Email
               </p>
               <p className='text-[18px] leading-[26px] px-[18px] py-[14px] opacity-80'>
@@ -31,17 +31,19 @@ const Footer = (props: Props) => {
               </p>
             </div>
 
+            <div className="flex flex-col lg:flex-row gap-[60px] lg:gap-[40px]">
             {footerLinks.map((group, idx) => (
               <div className="flex flex-col gap-[24px] justify-start" key={idx}>
                 {group.map((link, index) => (
-                  <Links className='!text-[18px] !leading-[26px] opacity-80 hover:opacity-100' link={link.link} url={link.url} key={index} />
+                  <Links className='!text-[18px] text-center lg:text-left !leading-[26px] opacity-80 hover:opacity-100' link={link.link} url={link.url} key={index} />
                 ))}
               </div>
             ))}
             </div>
+            </div>
          </div> 
-         <div className="pt-[120px] flex justify-between items-center">
-         <p className="text-[18px] leading-[26px] ">
+         <div className="pt-[120px] flex flex-col-reverse gap-[24px] lg:flex-row justify-between items-center">
+         <p className="w-[208px] lg:w-fit text-center lg:text-left text-[18px] leading-[26px] ">
                 &copy; i8 Design, Built by David Oluwagbemiga. All right reserved.
               </p>
             <div className="flex gap-[20px]">
