@@ -1,8 +1,8 @@
 import { Cloud, Developer, Integration, RealTime } from "src/assets"
-import { HowItWorksType, NavType, PricingCardType } from "./types"
+import { HowItWorksType, LinkType, PricingCardType } from "./types"
 import { FacebookIcon, GooglePlusIcon, LinkedInIcon, TwitterIcon, YoutubeIcon } from 'src/assets'
 
-export const links: NavType[] = [
+export const links: LinkType[] = [
     {
         link: 'Home',
         url: '/'
@@ -79,7 +79,7 @@ export const pricing: PricingCardType[] = [
     }, 
 ]
 
-export const footerLinks: NavType[][] = [
+export const footerLinks: LinkType[][] = [
     [
         {
             link: 'About us',

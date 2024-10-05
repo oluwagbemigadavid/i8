@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Links } from '../Nav/Nav'
 import { HeroMan, HeroPattern, VISALogo } from 'src/assets'
+import Links from '../Links/Link'
 
 
 type Props = {}

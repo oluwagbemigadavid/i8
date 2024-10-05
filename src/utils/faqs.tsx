@@ -1,4 +1,4 @@
-import { Links } from "src/components/Nav/Nav";
+import { Links } from "src/components";
 import { FAQsType } from "./types";
 
 export const faqs: FAQsType[] = [

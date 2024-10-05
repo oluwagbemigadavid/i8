@@ -1,6 +1,6 @@
 import React from 'react'
 
-export type NavType = {
+export type LinkType = {
     link: string;
     url: string
     className?: string;

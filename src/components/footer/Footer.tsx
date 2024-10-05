@@ -1,7 +1,7 @@
 import React from 'react'
 import { footerLinks, socialIcons } from 'src/utils'
-import { Links } from '../Nav/Nav'
 import {ChevronDown } from 'lucide-react'
+import Links from '../Links/Link'
 
 type Props = {}
 

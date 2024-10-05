@@ -2,7 +2,6 @@ import clsx from 'clsx'
 import React from 'react'
 import { MoonBoy, PricingSvg, StarPattern } from 'src/assets'
 import { pricing, PricingCardType } from 'src/utils'
-import { Links } from '../Nav/Nav'
 
 type Props = {}
 
