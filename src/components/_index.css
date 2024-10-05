@@ -1,6 +1,7 @@
 .nav .mobile_nav {
   width: 100dvw;
   height: 100dvh;
+  transition: height 350ms ease-out;
   animation: drop .35s linear ;
 
   .nav_link {
@@ -33,6 +34,11 @@
     opacity: 0;
     animation: appear .35s ease-in 850ms forwards;
   }
+}
+.close_nav {
+  overflow: hidden;
+  height: 0dvh !important;
+  transition: height 350ms ease-out;
 }
 
 @keyframes drop {
